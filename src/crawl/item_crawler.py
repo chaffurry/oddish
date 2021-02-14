@@ -36,6 +36,7 @@ def collect_item(item):
 
 
 def csgo_all_categories():
+    #<div id="search-hero" class="w-Sel-Hero" name="hero" id="j_sel-hero" value><div class="blank12"></div>
     prefix = '<div class="h1z1-selType type_csgo" id="j_h1z1-selType">'
     suffix = '</ul> </div> </div> <div class="criteria">'
     # to match all csgo skin categories
