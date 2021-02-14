@@ -1,7 +1,7 @@
 import sys
 
 from src.config.definitions import CRAWL_MAX_PRICE_ITEM, CRAWL_MIN_PRICE_ITEM
-
+#csgo & dota2    730 & 570
 BUFF_ROOT = 'https://buff.163.com/'
 STEAM_ROOT = 'https://steamcommunity.com/'
 BUFF_GOODS = BUFF_ROOT + 'api/market/goods?'
