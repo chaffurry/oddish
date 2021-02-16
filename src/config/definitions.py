@@ -86,3 +86,4 @@ CACHE_DIR = 'cache'
 LAST_DAYS = int(config_common['last_days'])
 EXCHANGE = float(config_common['exchange'])
 FENWEI = int(config_common['fenwei'])
+CSGO = int(config_common['csgo'])
