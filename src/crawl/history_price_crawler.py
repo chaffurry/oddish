@@ -34,6 +34,7 @@ def key_existence_check(item:Item, history_prices, steam_history_prices):
     days = 0
     try:
         if len(raw_price_history) > 0:
+            #last argu for last days
             days = min((datetime.today().date() - datetime.strptime(raw_price_history[0][0], '%b %d %Y %H: +0').date()).days, 7)
         else:
             days = 0
