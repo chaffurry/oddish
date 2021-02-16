@@ -82,7 +82,7 @@ SUGGESTION_LOGGER = os.path.join(SUGGESTION_PATH, 'suggestion_' + DATE_TIME + PR
 # cache file
 CACHE_DIR = 'cache'
 
-#config+
-LAST_DAYS = int(config_filter['last_days'])
-EXCHANGE = float(config_filter['exchange'])
-FENWEI = int(config_filter['fenwei'])
+#configplus
+LAST_DAYS = int(config_common['last_days'])
+EXCHANGE = float(config_common['exchange'])
+FENWEI = int(config_common['fenwei'])
