@@ -4,7 +4,7 @@ import asyncio
 
 # from tqdm import tqdm
 
-from src.config.definitions import CRAWL_MIN_PRICE_ITEM, CRAWL_MAX_PRICE_ITEM, BUFF_COOKIE, FORCE_CRAWL, CRAWL_STEAM_ASYNC
+from src.config.definitions import CRAWL_MIN_PRICE_ITEM, CRAWL_MAX_PRICE_ITEM, BUFF_COOKIE, FORCE_CRAWL, CRAWL_STEAM_ASYNC, CSGO
 from src.config.urls import goods_section_root_url, goods_root_url, goods_section_page_url
 from src.crawl import history_price_crawler
 from src.data.item import Item
@@ -36,9 +36,12 @@ def collect_item(item):
 
 
 def csgo_all_categories():
-    #<div id="search-hero" class="w-Sel-Hero" name="hero" id="j_sel-hero" value><div class="blank12"></div>
-    prefix = '<div class="h1z1-selType type_csgo" id="j_h1z1-selType">'
-    suffix = '</ul> </div> </div> <div class="criteria">'
+    if CSGO==1:
+        prefix = '<div class="h1z1-selType type_csgo" id="j_h1z1-selType">'
+        suffix = '</ul> </div> </div> <div class="criteria">'
+    else:
+        prefix = '<div id="search-hero" class="w-Sel-Hero" name="hero" id="j_sel-hero" value>'
+        suffix = '<div class="blank12"></div>'
     # to match all csgo skin categories
     category_regex = re.compile(r'<li value="(.+?)"', re.DOTALL)
 
