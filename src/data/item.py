@@ -76,5 +76,7 @@ class Item:
 
     @staticmethod
     def centered_average(numbers):
-        return np.percentile(numbers, 1) if len(numbers) != 0 else 0
+        return numbers[len(numbers)-1] if len(numbers)!=0 else 0
+        #return np.percentile(numbers, FENWEI) if len(numbers) != 0 else 0
         #.25 to .1
+
